@@ -1,143 +1,323 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: #EEEEEE;
-    max-width: 1440px;
-    height: 100%;
+body {
+  background-color: #eeeeee;
+  max-width: 1440px;
+  height: 100%;
 }
-#navBarContainer{
-    display: flex;
-    position: relative;
-    flex-direction: column;
+#navBarContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
 }
-nav{
-    height: 35px;
-    width: 100%;
-    display: flex;
-    align-items: center;
+nav {
+  height: 35px;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
-.nav1{
-    border: 0.3px solid lightgray;
+.nav1 {
+  border: 0.3px solid lightgray;
 }
-img.nav1Tools{
-    height: 100%;
-    width: 300px;
+img.nav1Tools {
+  height: 100%;
+  width: 300px;
 }
-.nav1SearchImg{
-    position: absolute;
-    height: 33px;
-    right: 1%;
+.nav1SearchImg {
+  position: absolute;
+  height: 33px;
+  right: 1%;
 }
-.nav1SearchBar{
-    position: absolute;
-    right: 1%;
-    height: 33px;
-    width: 300px;
-    border: 0.3px solid lightgray;
-    border-radius: 5px;
+.nav1SearchBar {
+  position: absolute;
+  right: 1%;
+  height: 33px;
+  width: 300px;
+  border: 0.3px solid lightgray;
+  border-radius: 5px;
 }
-.nav2{
-    height: 30px;
-    background-color: white;
+.nav2 {
+  height: 30px;
+  background-color: white;
 }
-.nav2 img{
-    position: absolute;
-    right: 1%;
+.nav2 img {
+  position: absolute;
+  right: 1%;
 }
-.nav2Div{
-    width: 100%;
-    font-size: 10px;
+.nav2Div {
+  width: 100%;
+  font-size: 10px;
 }
-.nav2Div :nth-child(1){
-    text-decoration: underline;
-    font-weight: bolder;
-    margin-left: 1%;
+.nav2Div :nth-child(1) {
+  text-decoration: underline;
+  font-weight: bolder;
+  margin-left: 1%;
 }
-.nav2Div :nth-child(2){
-    color: gray;
-    font-size: 10px;
+.nav2Div :nth-child(2) {
+  color: gray;
+  font-size: 10px;
 }
-.nav3{
-    border-bottom: 5px solid lightgray;
+.nav3 {
+  border-bottom: 5px solid lightgray;
 }
-.nav3 img{
-    position: absolute;
-    right: 1%;
+.nav3 img {
+  position: absolute;
+  right: 1%;
 }
-.nav3Span{
-    color: rgb(92, 92, 92);
-    font-weight: bold;
-    margin-left: 1%;
+.nav3Span {
+  color: rgb(92, 92, 92);
+  font-weight: bold;
+  margin-left: 1%;
 }
-.nav3Input{
-    font-size: 10px;
-    height: 25px;
-    width: 140px;
-    border: 0.3px solid lightgray;
-    border-radius: 5px;
-    margin-left: 1%;
-    text-align: center;
+.nav3Input {
+  font-size: 10px;
+  height: 25px;
+  width: 140px;
+  border: 0.3px solid lightgray;
+  border-radius: 5px;
+  margin-left: 1%;
+  text-align: center;
 }
-button.nav3Btn{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(/img/exitBtn.svg);
-    height: 25px;
-    width: 70px;
-    padding: 2px;
-    margin: 10px;
-    outline: none;
-    border: none;
+button.nav3Btn {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(/img/exitBtn.svg);
+  height: 25px;
+  width: 70px;
+  padding: 2px;
+  margin: 10px;
+  outline: none;
+  border: none;
 }
-#workerTools{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: -18%;
-    left: 5%;
+#workerTools {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -18%;
+  left: 5%;
 }
-.workerInfo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.workerInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-.workerInfo :nth-child(2){
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #696969;
+.workerInfo :nth-child(2) {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #696969;
 }
 .workerInfo :nth-child(3),
 .workerInfo :nth-child(4),
-.workerInfo :nth-child(5){
-    font-weight:lighter;
-    color: #969696;
+.workerInfo :nth-child(5) {
+  font-weight: lighter;
+  color: #969696;
 }
-.toolsContainer{
-    height: 430px;
-    width: 200px;
-    margin-top: 30px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 41%;
-    z-index: -1;
-    border-radius: 5px;
+.toolsContainer {
+  height: 430px;
+  width: 200px;
+  margin-top: 30px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 41%;
+  z-index: -1;
+  border-radius: 5px;
 }
-hr{
-    margin-top: 10px;
-    border: 0.5px solid rgb(233, 233, 233);
-    width: 140%;
+.toolsContainer hr {
+  margin-top: 10px;
+  border: 0.5px solid rgb(233, 233, 233);
+  width: 140%;
 }
-.toolsContainer aside{
-    position: relative;
-    top: 35%;
-    text-align: center;
+.toolsContainer aside {
+  position: relative;
+  top: 35%;
+  text-align: center;
+}
+section#assigmentContainer {
+  top: 20px;
+  right: -22%;
+  position: relative;
+  border-radius: 5px;
+  width: 75%;
+  height: 480px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.assigmentHeader {
+  border-radius: 5px 5px 0 0;
+  top: 1px;
+  width: 100%;
+  position: absolute;
+  height: 80px;
+  border-bottom: 3px solid #1b344c;
+  display: flex;
+  justify-content: center;
+}
+.assigmentHeader img {
+  margin: 10px 10% 0 10%;
+  z-index: 1;
+}
+.assigmentHeader hr {
+  top: 35px;
+  width: 35%;
+  border: 1px solid #1b344c;
+  position: absolute;
+}
+.assignmentsSection {
+  top: 80px;
+  width: 95%;
+  height: 400px;
+  position: absolute;
+  border-radius: 5px;
+}
+.assignmentsSection img {
+  position: absolute;
+  top: 10px;
+  right: 2%;
+}
+.assignmentsSection img:hover {
+  border: 2px solid red;
+}
+.assignmentSpan {
+  font-size: 16px;
+  color: #696969;
+  font-weight: bold;
+  position: absolute;
+  left: 1%;
+  top: 2%;
+}
+.assignmentsDiv {
+  background-color: #f6f6f6;
+  position: relative;
+  margin-top: 10px;
+  top: 10%;
+  min-height: 80px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 8px grey;
+}
+/* 1st part : list */
+.assignmentsUl li {
+  font-size: 10px;
+  color: #848484;
+  margin-top: 10px;
+}
+.assignmentsUl :nth-child(1) {
+    padding-top: 15px;
+  font-weight: bold;
+  color: #5b5b5b;
+}
+.assignmentsUl :nth-child(2) {
+  font-weight: bold;
+}
+hr.verticalHr {
+  position: absolute;
+  top: 5%;
+  left: 22%;
+  height: 80%;
+}
+/* 2nd part : state */
+.stateLabel {
+  color: #5b5b5b;
+  font-size: 12px;
+  top: 25%;
+  position: absolute;
+  left: 23%;
+  font-weight: bold;
+}
+.stateSelect {
+  font-size: 10px;
+  top: 50%;
+  position: absolute;
+  left: 23%;
+  width: 100px;
+}
+hr.verticalHr2 {
+  position: absolute;
+  height: 80%;
+  top: 5%;
+  left: 35%;
+}
+/* 3rd part : due date */
+.dueDateLabel {
+  color: #5b5b5b;
+  font-size: 12px;
+  top: 25%;
+  position: absolute;
+  left: 37%;
+  font-weight: bold;
+}
+.dueDateInput {
+  font-size: 10px;
+  top: 50%;
+  position: absolute;
+  left: 37%;
+  width: 100px;
+  height: 16px;
+}
+hr.verticalHr3 {
+  position: absolute;
+  height: 80%;
+  top: 5%;
+  left: 50%;
+}
+/* 4th part : repo date */
+.repoDateLabel {
+  color: #5b5b5b;
+  font-size: 12px;
+  top: 25%;
+  position: absolute;
+  left: 52%;
+  font-weight: bold;
+}
+.repoDateInput {
+  font-size: 10px;
+  top: 50%;
+  position: absolute;
+  left: 52%;
+  width: 100px;
+  height: 16px;
+}
+hr.verticalHr4 {
+  position: absolute;
+  height: 80%;
+  top: 5%;
+  left: 65%;
+}
+/* 5th part : observations */
+.observations {
+  height: 50px;
+  width: 175px;
+  color: #bbbbbb;
+  position: absolute;
+  top: 10px;
+  right: 15%;
+  font-size: 10px;
+}
+.assignmentsDiv img {
+  position: absolute;
+  top: 20px;
+  right: 13%;
+}
+.completedBtn {
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  background-color: #36a792;
+  position: absolute;
+  top: 20px;
+  right: 1%;
 }
