@@ -2,7 +2,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
+#body{
   background-color: #eeeeee;
   max-width: 1440px;
   height: 100%;
@@ -92,6 +92,7 @@ button.nav3Btn {
   border: none;
 }
 #workerTools {
+  z-index: 5;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -108,7 +109,11 @@ button.nav3Btn {
   align-items: center;
   position: relative;
 }
+#workerIcon{
+  z-index: 2;
+}
 .workerInfo :nth-child(2) {
+  z-index: 2;
   font-weight: bold;
   margin-bottom: 10px;
   color: #696969;
@@ -116,6 +121,7 @@ button.nav3Btn {
 .workerInfo :nth-child(3),
 .workerInfo :nth-child(4),
 .workerInfo :nth-child(5) {
+  z-index: 2;
   font-weight: lighter;
   color: #969696;
 }
@@ -128,7 +134,7 @@ button.nav3Btn {
   flex-direction: column;
   position: absolute;
   top: 41%;
-  z-index: -1;
+  z-index: 1;
   border-radius: 5px;
 }
 .toolsContainer hr {
@@ -140,6 +146,14 @@ button.nav3Btn {
   position: relative;
   top: 35%;
   text-align: center;
+}
+div.toolsContainer aside img{
+  z-index: 2; 
+}
+div.toolsContainer aside img:hover{
+  border: 2px solid red;
+  filter: 100% #36A792;
+  cursor: pointer;
 }
 section#assigmentContainer {
   top: 20px;
@@ -186,7 +200,12 @@ section#assigmentContainer {
   right: 2%;
 }
 .assignmentsSection img:hover {
-  border: 2px solid red;
+  cursor: pointer;
+}
+#newElementMsg{
+    position: relative;
+    top: -17px;
+    right: -80%;
 }
 .assignmentSpan {
   font-size: 16px;
@@ -212,7 +231,7 @@ section#assigmentContainer {
   margin-top: 10px;
 }
 .assignmentsUl :nth-child(1) {
-    padding-top: 15px;
+  padding-top: 15px;
   font-weight: bold;
   color: #5b5b5b;
 }
@@ -309,6 +328,7 @@ hr.verticalHr4 {
   right: 13%;
 }
 .completedBtn {
+  cursor: pointer;
   border: none;
   border-radius: 5px;
   width: 100px;
@@ -321,3 +341,4 @@ hr.verticalHr4 {
   top: 20px;
   right: 1%;
 }
+

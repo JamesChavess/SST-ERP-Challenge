@@ -1,6 +1,7 @@
 let body = document.getElementById("body");
 let hr = document.createElement("hr"); // specify classes for these to standarize vertical hr
 let br = document.createElement("br");
+let completedBtn = document.querySelector(".completedBtn");
 
 function createNavBars() {
   let navBarContainer = document.createElement("section");
@@ -88,6 +89,7 @@ function createWorkerTools(name, id, title, team) {
 
   let workerIcon = document.createElement("img");
   workerIcon.src = "./img/personIcon.svg";
+  workerIcon.id = 'workerIcon';
 
   let workerName = document.createElement("span");
   workerName.innerText = name;
@@ -118,6 +120,9 @@ function createWorkerTools(name, id, title, team) {
   let workData = document.createElement("img");
   workElements.src = "./img/workElements.svg";
   workData.src = "./img/workData.svg";
+  workElements.addEventListener('click',()=>{
+  workElements.style.border = '2px solid red';
+  })
 
   let workerTools2 = document.createElement("aside");
   let examVaccines = document.createElement("img");
@@ -136,6 +141,10 @@ function createWorkerTools(name, id, title, team) {
   let healthState = document.createElement("img");
   laborAccidents.src = "./img/laborAccidents.svg";
   healthState.src = "./img/healthState.svg";
+  laborAccidents.addEventListener('click',()=>{
+    laborAccidents.style.border = '2px solid red';
+    })
+  
 
   workerTools.append(toolContainer);
   toolContainer.append(workerTools1);
@@ -157,7 +166,7 @@ function createWorkerTools(name, id, title, team) {
   body.append(workerTools);
 }
 
-function createWorkerAssignments() {
+function createAssignmentsContainer() {
   let assigmentContainer = document.createElement("section");
   assigmentContainer.id = "assigmentContainer";
 
@@ -186,13 +195,25 @@ function createWorkerAssignments() {
 
   let newElementImg = document.createElement("img");
   newElementImg.src = "./img/newElement.svg";
+  newElementImg.id = "newElement";
+
+  let newElementMsg = document.createElement("img");
+  newElementMsg.src = "./img/newElementMsg.svg";
+  newElementMsg.style.display = "none";
+  newElementMsg.id = "newElementMsg";
 
   assigmentContainer.append(assignmentsSection);
   assignmentsSection.append(assigmentSpan);
   assignmentsSection.append(newElementImg);
+  assignmentsSection.append(newElementMsg);
 
+  body.append(assigmentContainer);
+}
+
+function createNewAssignments() {
   //individual Assigments -- refactor into function
   //1st part : list
+  assignmentsSection = document.querySelector(".assignmentsSection");
   let assignmentsDiv = document.createElement("div");
   assignmentsDiv.classList.add("assignmentsDiv");
 
@@ -209,6 +230,7 @@ function createWorkerAssignments() {
   let verticalHr = document.createElement("hr");
   verticalHr.classList.add("verticalHr");
 
+  assignmentsSection.append(assignmentsDiv);
   assignmentsDiv.append(assignmentsUl);
   assignmentsUl.append(assignmentsLi1);
   assignmentsUl.append(assignmentsLi2);
@@ -284,20 +306,41 @@ function createWorkerAssignments() {
   observations.placeholder = "Observaciones...";
 
   let paperClipImg = document.createElement("img");
+  paperClipImg.id = "paperClipImg";
   paperClipImg.src = "./img/paperClip.svg";
+
+  let clipInput = document.createElement("input");
+  clipInput.style.display = "none";
+  clipInput.type = "file";
+  clipInput.accept = "*";
 
   let completedBtn = document.createElement("button");
   completedBtn.classList.add("completedBtn");
   completedBtn.innerText = "Completar";
 
   assignmentsDiv.append(observations);
+  assignmentsDiv.append(clipInput);
   assignmentsDiv.append(paperClipImg);
   assignmentsDiv.append(completedBtn);
 
-  assignmentsSection.append(assignmentsDiv);
-  body.append(assigmentContainer);
+  clipInput.addEventListener('change',()=>{
+      console.log(clipInput.files[0].name)
+  })
+  paperClipImg.addEventListener("click", () => {
+      clipInput.click()
+  });
 }
-
 createNavBars();
 createWorkerTools("James A. Chaves F.", "1125980603", "JR Developer 🤞", "GTH");
-createWorkerAssignments();
+createAssignmentsContainer();
+
+document.getElementById("newElement").addEventListener("click", () => {
+  console.log("btn click works fine");
+  createNewAssignments();
+});
+document.getElementById("newElement").addEventListener("mouseenter", () => {
+  newElementMsg.style.display = "flex";
+});
+document.getElementById("newElement").addEventListener("mouseleave", () => {
+  newElementMsg.style.display = "none";
+});
